@@ -5,14 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO & Metadata -->
-    <title id="meta-title">هاني لنجارة وتفصيل الخزائن بالرياض | غرف نوم ومطابخ مودرن</title>
-    <meta name="description" id="meta-desc" content="خدمات هاني المحترفة لتفصيل الخزائن وغرف النوم والأطفال في الرياض. تصميم وتنفيذ دواليب ملابس مخصصة، تصليح أثاث، وأعمال نجارة متكاملة بأجود أنواع الخشب السعودي والأوروبي.">
-    <meta name="keywords" content="تفصيل خزائن الرياض, تفصيل غرف نوم, نجار الرياض, دواليب ملابس, تصليح اثاث, غرف اطفال, نجارة خشب">
+    <title id="meta-title">هاني لخدمات تفصيل دواليب وغرف الملابس</title>
+    <meta name="description" id="meta-desc" content="أفضل خدمات تفصيل وتصميم دواليب الملابس، غرف النوم، وغرف الأطفال بالرياض بأحدث التقنيات وأجود أنواع الأخشاب. قصة شغف بالنجارة المتقنة.">
+    <meta name="keywords" content="تفصيل دواليب، غرف ملابس، نجارة الرياض، تفصيل غرف نوم، هاني للنجارة">
     
-    <!-- Fonts -->
+    <!-- Open Graph for Social Media & WhatsApp -->
+    <meta property="og:title" content="هاني لخدمات تفصيل دواليب وغرف الملابس">
+    <meta property="og:description" content="نصمم وننفذ أرقى غرف الملابس والمكاتب المنزلية بأيدي محترفة في الرياض.">
+    <meta property="og:image" content="https://i.ibb.co/YKK1Dtj/unwatermarked-1000302269.png">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts (Cairo) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -28,46 +34,52 @@
                             800: '#5c3e1c', 900: '#4c3319',
                         }
                     },
-                    fontFamily: { sans: ['Cairo', 'Plus Jakarta Sans', 'sans-serif'] }
+                    fontFamily: { sans: ['Cairo', 'sans-serif'] }
                 }
             }
         }
     </script>
     
     <style>
-        * { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        .glass-header { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
-        .service-card:hover img { transform: scale(1.1); }
+        body { font-family: 'Cairo', sans-serif; overflow-x: hidden; }
+        * { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        
+        /* بداية التحميل - انميشن */
+        @keyframes pageReveal {
+            from { opacity: 0; transform: translateY(30px); filter: blur(10px); }
+            to { opacity: 1; transform: translateY(0); filter: blur(0); }
+        }
+        .reveal { animation: pageReveal 1s ease-out forwards; }
+
+        .glass-header { backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); }
+        .service-card { border: 1px solid rgba(181, 138, 63, 0.2); }
+        .service-card:hover { border-color: #b58a3f; transform: translateY(-5px); box-shadow: 0 10px 30px -10px rgba(181, 138, 63, 0.3); }
+        
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        .animate-fade-in { animation: fadeIn 0.8s ease-out forwards; }
+
+        input, select, textarea { font-size: 0.9rem !important; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 dark:bg-neutral-950 dark:text-slate-100 min-h-screen flex flex-col overflow-x-hidden antialiased">
+<body class="bg-slate-50 text-slate-800 dark:bg-neutral-950 dark:text-slate-100 min-h-screen flex flex-col antialiased reveal">
 
     <!-- Header Section -->
-    <header class="sticky top-0 z-50 w-full border-b border-slate-200/80 dark:border-slate-800/80 bg-white/90 dark:bg-neutral-950/90 glass-header">
-        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+    <header class="sticky top-0 z-50 w-full border-b border-slate-200/60 dark:border-slate-800/60 bg-white/80 dark:bg-neutral-950/80 glass-header">
+        <div class="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <button id="mobile-menu-btn" class="p-2 lg:hidden rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
-                </button>
-                <a href="#" class="flex items-center gap-2 transform scale-90 origin-right">
-                    <div class="w-8 h-8 rounded bg-brand-600 flex items-center justify-center text-white">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-                        </svg>
+                <a href="#" class="flex items-center gap-2 transform scale-75 origin-right">
+                    <div class="w-10 h-10 rounded-lg bg-brand-600 flex items-center justify-center text-white shadow-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
                     </div>
-                    <span class="font-bold text-base tracking-tight whitespace-nowrap" data-i18n="header_brand">هاني لتفصيل الدواليب</span>
+                    <span class="font-bold text-lg tracking-tight whitespace-nowrap text-brand-900 dark:text-brand-100">هاني لتفصيل الدواليب</span>
                 </a>
             </div>
 
-            <nav class="hidden lg:flex items-center gap-8 text-sm font-bold">
-                <a href="#" class="text-brand-600" data-i18n="nav_home">الرئيسية</a>
-                <a href="#services" class="hover:text-brand-500" data-i18n="nav_services">خدماتنا</a>
-                <a href="#about" class="hover:text-brand-500" data-i18n="nav_about">من نحن</a>
-                <a href="#contact" class="hover:text-brand-500" data-i18n="nav_contact">طلب تسعيرة</a>
+            <nav class="hidden lg:flex items-center gap-6 text-[13px] font-bold">
+                <a href="#" class="text-brand-600">الرئيسية</a>
+                <a href="#services" class="hover:text-brand-500">خدماتنا</a>
+                <a href="#about" class="hover:text-brand-500">من نحن</a>
+                <a href="#contact" class="hover:text-brand-500">طلب تسعيرة</a>
             </nav>
 
             <div class="flex items-center gap-2">
@@ -75,110 +87,108 @@
                     <svg id="theme-moon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
                     <svg id="theme-sun" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z" /></svg>
                 </button>
-                <button id="lang-toggle" class="px-3 py-1 text-xs font-black rounded-lg border border-brand-200 text-brand-600">EN</button>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative overflow-hidden bg-white dark:bg-neutral-900 pt-6 pb-16">
+    <section class="relative bg-white dark:bg-neutral-900 pt-4 pb-12">
         <div class="max-w-7xl mx-auto px-4">
-            <!-- Hero Image Top -->
-            <div class="w-full h-[300px] sm:h-[450px] rounded-3xl overflow-hidden shadow-2xl mb-10 animate-fade-in">
-                <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=1200&q=80" alt="Modern Closet Riyadh" class="w-full h-full object-cover">
+            <div class="w-full h-[280px] sm:h-[480px] rounded-[2rem] overflow-hidden shadow-2xl mb-8 border border-brand-100 dark:border-brand-900">
+                <img src="https://i.ibb.co/YKK1Dtj/unwatermarked-1000302269.png" alt="هاني لتفصيل غرف الملابس" class="w-full h-full object-cover transform hover:scale-105 duration-1000">
             </div>
             
-            <div class="text-center space-y-6 max-w-4xl mx-auto">
-                <span class="inline-block px-4 py-1.5 rounded-full bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 text-xs font-bold tracking-widest" data-i18n="hero_tagline">فخامة النجارة السعودية بأيدي محترفة</span>
-                <h1 class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white leading-tight" data-i18n="hero_title">نصمم لك خزانة أحلامك بدقة متناهية</h1>
-                <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed" data-i18n="hero_desc">خبراء في تفصيل الخزائن المودرن وغرف النوم المخصصة في الرياض، نجمع بين استغلال المساحات الذكي وأرقى التصاميم العالمية لنمنح منزلك لمسة من الرقي والجمال.</p>
-                <div class="flex flex-wrap justify-center gap-4">
-                    <a href="#contact" class="px-8 py-4 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-2xl shadow-lg transform hover:-translate-y-1" data-i18n="hero_cta">ابدأ تصميم غرفتك الآن</a>
-                    <a href="tel:0560450799" class="px-8 py-4 bg-slate-100 dark:bg-slate-800 font-bold rounded-2xl flex items-center gap-2" data-i18n="hero_call">اتصل بنا مباشرة</a>
+            <div class="text-center space-y-4 max-w-3xl mx-auto">
+                <span class="inline-block px-4 py-1 rounded-full bg-brand-50 dark:bg-brand-900/30 text-brand-600 text-[11px] font-black tracking-widest uppercase">إتقان . جودة . فخامة</span>
+                <h1 class="text-2xl sm:text-4xl font-black text-slate-900 dark:text-white leading-tight">هاني لخدمات تفصيل دواليب وغرف الملابس</h1>
+                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed px-4">نحن في هاني للنجارة نؤمن أن الخزائن ليست مجرد مكان للتخزين، بل هي جزء من أناقة منزلك. نصمم وننفذ أرقى الدواليب وغرف النوم في الرياض بمعايير عالمية.</p>
+                <div class="flex flex-wrap justify-center gap-3 pt-2">
+                    <a href="#contact" class="px-7 py-3 bg-brand-600 hover:bg-brand-700 text-white text-sm font-bold rounded-xl shadow-lg shadow-brand-500/20">احجز معاينة مجانية</a>
+                    <a href="tel:0560450799" class="px-7 py-3 bg-slate-100 dark:bg-slate-800 text-sm font-bold rounded-xl border border-slate-200 dark:border-slate-700">اتصل بنا</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 bg-slate-50 dark:bg-neutral-950">
+    <section id="services" class="py-16 bg-slate-50 dark:bg-neutral-950">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-black mb-4" data-i18n="services_section_title">خدماتنا المتخصصة في الرياض</h2>
-                <div class="w-20 h-1.5 bg-brand-500 mx-auto rounded-full"></div>
+            <div class="text-center mb-12">
+                <h2 class="text-2xl font-black mb-3">خدماتنا المتخصصة في الرياض</h2>
+                <div class="w-12 h-1 bg-brand-500 mx-auto rounded-full"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service Cards will be generated or filled here -->
-                <!-- Example Service Card 1 -->
-                <div class="service-card group bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-100 dark:border-slate-800">
-                    <div class="h-56 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1558997519-53bb89092c83?auto=format&fit=crop&w=600&q=80" alt="خزائن مخصصة" class="w-full h-full object-cover">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Service 1 -->
+                <div class="service-card group bg-white dark:bg-neutral-900 rounded-2xl overflow-hidden shadow-sm flex flex-col">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://i.ibb.co/ym38qgfm/09ee0802-d8be-423d-90c6-ad819be1574c-thumbnail-770x770.png" alt="تفصيل خزائن الرياض" class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6 space-y-4">
-                        <h3 class="text-xl font-bold" data-i18n="service1_title">تفصيل خزائن في الرياض</h3>
-                        <p class="text-sm text-slate-500 leading-relaxed h-32 overflow-hidden" data-i18n="service1_desc">نقدم خدمة تفصيل الخزائن المبتكرة في الرياض بأحدث التقنيات. نعتمد على دراسة المساحة بدقة لتوفير حلول تخزين ذكية تناسب احتياجاتك. نستخدم أخشاباً عالية الجودة مقاومة للرطوبة والحرارة، مع ضمان ممتد على الاكسسوارات والمفصلات. سواء كنت تبحث عن تصميم كلاسيكي أو مودرن، فريقنا يضمن لك تنفيذاً احترافياً يفوق توقعاتك، مع التركيز على التفاصيل الدقيقة التي تجعل من خزانتك قطعة فنية عملية تدوم لسنوات طويلة في منزلك بالرياض.</p>
-                        <button onclick="orderService('تفصيل خزائن في الرياض')" class="w-full py-3 bg-brand-500 hover:bg-brand-600 text-white rounded-xl font-bold transition-all" data-i18n="order_service">اطلب هذه الخدمة الآن</button>
+                    <div class="p-5 flex-grow space-y-3">
+                        <h3 class="text-lg font-black text-brand-700 dark:text-brand-400 text-center">تفصيل خزائن في الرياض</h3>
+                        <p class="text-[13px] text-slate-500 leading-relaxed text-justify">نقدم خدمة تفصيل الخزائن المبتكرة في الرياض بأحدث التقنيات. نعتمد على دراسة المساحة بدقة لتوفير حلول تخزين ذكية تناسب احتياجاتك. نستخدم أخشاباً عالية الجودة مقاومة للرطوبة والحرارة، مع ضمان ممتد على الاكسسوارات والمفصلات. سواء كنت تبحث عن تصميم كلاسيكي أو مودرن، فريقنا يضمن لك تنفيذاً احترافياً يفوق توقعاتك، مع التركيز على التفاصيل الدقيقة التي تجعل من خزانتك قطعة فنية عملية تدوم لسنوات طويلة في منزلك بالرياض.</p>
+                        <button onclick="orderService('تفصيل خزائن في الرياض')" class="w-full py-2.5 mt-2 bg-brand-500 hover:bg-brand-600 text-white rounded-lg text-xs font-bold transition-all">اطلب هذه الخدمة الآن</button>
                     </div>
                 </div>
 
                 <!-- Service 2 -->
-                <div class="service-card group bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-100 dark:border-slate-800">
-                    <div class="h-56 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=600&q=80" alt="غرف نوم" class="w-full h-full object-cover">
+                <div class="service-card group bg-white dark:bg-neutral-900 rounded-2xl overflow-hidden shadow-sm flex flex-col">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://i.ibb.co/k2xqksqm/efe9cc57-88c8-4b97-ab5f-324bc027b307-1000x998-33333333333-y-UF3s56-Gt6di-NOd3hj4g2o-V9-WHr0nnyk1-Hmlccu.jpg" alt="غرف نوم الرياض" class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6 space-y-4">
-                        <h3 class="text-xl font-bold" data-i18n="service2_title">تفصيل غرف نوم في الرياض</h3>
-                        <p class="text-sm text-slate-500 leading-relaxed h-32 overflow-hidden" data-i18n="service2_desc">متخصصون في تصميم وتنفيذ غرف النوم الكاملة بلمسات فندقية فاخرة في الرياض. نقوم بتفصيل السرر، الكومودينو، وتسريحات الملابس بتناغم تام مع ديكور الغرفة. نستخدم خامات الخشب الطبيعي والقماش الفاخر لضمان الراحة والاستدامة. نوفر لك خدمة التصميم ثلاثي الأبعاد قبل التنفيذ لتتخيل غرفتك بالكامل. التزامنا بالمواعيد وجودة التشطيب جعلنا الخيار الأول لآلاف العائلات في مدينة الرياض الذين يبحثون عن الأناقة والهدوء في مكان نومهم الخاص.</p>
-                        <button onclick="orderService('تفصيل غرف نوم في الرياض')" class="w-full py-3 bg-brand-500 hover:bg-brand-600 text-white rounded-xl font-bold transition-all" data-i18n="order_service">اطلب هذه الخدمة الآن</button>
+                    <div class="p-5 flex-grow space-y-3">
+                        <h3 class="text-lg font-black text-brand-700 dark:text-brand-400 text-center">تفصيل غرف نوم في الرياض</h3>
+                        <p class="text-[13px] text-slate-500 leading-relaxed text-justify">متخصصون في تصميم وتنفيذ غرف النوم الكاملة بلمسات فندقية فاخرة في الرياض. نقوم بتفصيل السرر، الكومودينو، وتسريحات الملابس بتناغم تام مع ديكور الغرفة. نستخدم خامات الخشب الطبيعي والقماش الفاخر لضمان الراحة والاستدامة. نوفر لك خدمة التصميم ثلاثي الأبعاد قبل التنفيذ لتتخيل غرفتك بالكامل. التزامنا بالمواعيد وجودة التشطيب جعلنا الخيار الأول لآلاف العائلات في مدينة الرياض الذين يبحثون عن الأناقة والهدوء في مكان نومهم الخاص.</p>
+                        <button onclick="orderService('تفصيل غرف نوم في الرياض')" class="w-full py-2.5 mt-2 bg-brand-500 hover:bg-brand-600 text-white rounded-lg text-xs font-bold transition-all">اطلب هذه الخدمة الآن</button>
                     </div>
                 </div>
 
                 <!-- Service 3 -->
-                <div class="service-card group bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-100 dark:border-slate-800">
-                    <div class="h-56 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=600&q=80" alt="غرف أطفال" class="w-full h-full object-cover">
+                <div class="service-card group bg-white dark:bg-neutral-900 rounded-2xl overflow-hidden shadow-sm flex flex-col">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://i.ibb.co/Qjt9jZn8/1.webp" alt="غرف اطفال الرياض" class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6 space-y-4">
-                        <h3 class="text-xl font-bold" data-i18n="service3_title">تفصيل غرف أطفال في الرياض</h3>
-                        <p class="text-sm text-slate-500 leading-relaxed h-32 overflow-hidden" data-i18n="service3_desc">نصمم غرف أطفال ملهمة وآمنة في الرياض تجمع بين اللعب والترتيب والدراسة. نهتم بمعايير السلامة العالمية في اختيار الدهانات والأخشاب لضمان بيئة صحية لأطفالك. نبتكر حلولاً لتخزين الألعاب والكتب بشكل منظم يسهل على الطفل استخدامه. غرفنا تتميز بالألوان الحيوية والتصاميم التي تنمو مع طفلك، مما يجعلها استثماراً طويل الأمد. فريقنا في الرياض يدرك أهمية المساحة في غرف الصغار، لذا نقدم تصاميم مدمجة وذكية توفر مساحة كافية للحركة والإبداع.</p>
-                        <button onclick="orderService('تفصيل غرف أطفال في الرياض')" class="w-full py-3 bg-brand-500 hover:bg-brand-600 text-white rounded-xl font-bold transition-all" data-i18n="order_service">اطلب هذه الخدمة الآن</button>
+                    <div class="p-5 flex-grow space-y-3">
+                        <h3 class="text-lg font-black text-brand-700 dark:text-brand-400 text-center">تفصيل غرف أطفال في الرياض</h3>
+                        <p class="text-[13px] text-slate-500 leading-relaxed text-justify">نصمم غرف أطفال ملهمة وآمنة في الرياض تجمع بين اللعب والترتيب والدراسة. نهتم بمعايير السلامة العالمية في اختيار الدهانات والأخشاب لضمان بيئة صحية لأطفالك. نبتكر حلولاً لتخزين الألعاب والكتب بشكل منظم يسهل على الطفل استخدامه. غرفنا تتميز بالألوان الحيوية والتصاميم التي تنمو مع طفلك، مما يجعلها استثماراً طويل الأمد. فريقنا في الرياض يدرك أهمية المساحة في غرف الصغار، لذا نقدم تصاميم مدمجة وذكية توفر مساحة كافية للحركة والإبداع.</p>
+                        <button onclick="orderService('تفصيل غرف أطفال في الرياض')" class="w-full py-2.5 mt-2 bg-brand-500 hover:bg-brand-600 text-white rounded-lg text-xs font-bold transition-all">اطلب هذه الخدمة الآن</button>
                     </div>
                 </div>
 
-                 <!-- Service 4 -->
-                 <div class="service-card group bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-100 dark:border-slate-800">
-                    <div class="h-56 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=600&q=80" alt="دواليب ملابس" class="w-full h-full object-cover">
+                <!-- Service 4 -->
+                <div class="service-card group bg-white dark:bg-neutral-900 rounded-2xl overflow-hidden shadow-sm flex flex-col">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://i.ibb.co/3yxc7KNf/50.jpg" alt="دواليب ملابس" class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6 space-y-4">
-                        <h3 class="text-xl font-bold" data-i18n="service4_title">تفصيل دواليب ملابس بالرياض</h3>
-                        <p class="text-sm text-slate-500 leading-relaxed h-32 overflow-hidden" data-i18n="service4_desc">نقدم خدمات تفصيل دواليب الملابس (الدريسنج روم) بأناقة متناهية وتوزيع داخلي ذكي في الرياض. نركز على توفير أماكن مخصصة لكل شيء، من الأحذية والحقائب إلى الساعات والمجوهرات بإضاءات LED مخفية. نستخدم أنظمة إغلاق ناعم (Soft Close) وجرارات حديثة تضمن سلاسة الاستخدام اليومي. تصاميمنا في الرياض تعتمد على استغلال كل سنتيمتر متاح، مما يحول الفوضى إلى تنظيم رائع يضفي جمالاً على غرفتك ويسهل عليك اختيار ملابسك يومياً بكل راحة وفخامة.</p>
-                        <button onclick="orderService('تفصيل دواليب ملابس')" class="w-full py-3 bg-brand-500 hover:bg-brand-600 text-white rounded-xl font-bold transition-all" data-i18n="order_service">اطلب هذه الخدمة الآن</button>
+                    <div class="p-5 flex-grow space-y-3">
+                        <h3 class="text-lg font-black text-brand-700 dark:text-brand-400 text-center">تفصيل دواليب ملابس بالرياض</h3>
+                        <p class="text-[13px] text-slate-500 leading-relaxed text-justify">نقدم خدمات تفصيل دواليب الملابس (الدريسنج روم) بأناقة متناهية وتوزيع داخلي ذكي في الرياض. نركز على توفير أماكن مخصصة لكل شيء، من الأحذية والحقائب إلى الساعات والمجوهرات بإضاءات LED مخفية. نستخدم أنظمة إغلاق ناعم (Soft Close) وجرارات حديثة تضمن سلاسة الاستخدام اليومي. تصاميمنا في الرياض تعتمد على استغلال كل سنتيمتر متاح، مما يحول الفوضى إلى تنظيم رائع يضفي جمالاً على غرفتك ويسهل عليك اختيار ملابسك يومياً بكل راحة وفخامة.</p>
+                        <button onclick="orderService('تفصيل دواليب ملابس')" class="w-full py-2.5 mt-2 bg-brand-500 hover:bg-brand-600 text-white rounded-lg text-xs font-bold transition-all">اطلب هذه الخدمة الآن</button>
                     </div>
                 </div>
 
                 <!-- Service 5 -->
-                <div class="service-card group bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-100 dark:border-slate-800">
-                    <div class="h-56 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=600&q=80" alt="أعمال نجارة" class="w-full h-full object-cover">
+                <div class="service-card group bg-white dark:bg-neutral-900 rounded-2xl overflow-hidden shadow-sm flex flex-col">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://i.ibb.co/rR4yTdKW/20191001-095341-copy.webp" alt="أعمال نجارة" class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6 space-y-4">
-                        <h3 class="text-xl font-bold" data-i18n="service5_title">أعمال نجارة متكاملة</h3>
-                        <p class="text-sm text-slate-500 leading-relaxed h-32 overflow-hidden" data-i18n="service5_desc">نقدم كافة حلول النجارة المنزلية والمكتبية في الرياض باحترافية عالية. من تركيب الأبواب والبراويز إلى تفصيل الطاولات والأرفف الديكورية. فريقنا من النجارين المهرة يمتلك الخبرة للتعامل مع مختلف أنواع الأخشاب الصلبة والمصنعة. نضمن لك تشطيباً ناعماً ودهانات عالية الجودة تدوم طويلاً. سواء كان مشروعك صغيراً في شقة أو كبيراً في فيلا، نحن نلتزم بتقديم أدق النتائج وأجمل التصاميم الخشبية التي تضفي دفئاً وقيمة جمالية على مسكنك في أي مكان داخل الرياض.</p>
-                        <button onclick="orderService('أعمال نجارة متكاملة')" class="w-full py-3 bg-brand-500 hover:bg-brand-600 text-white rounded-xl font-bold transition-all" data-i18n="order_service">اطلب هذه الخدمة الآن</button>
+                    <div class="p-5 flex-grow space-y-3">
+                        <h3 class="text-lg font-black text-brand-700 dark:text-brand-400 text-center">أعمال نجارة متكاملة</h3>
+                        <p class="text-[13px] text-slate-500 leading-relaxed text-justify">نقدم كافة حلول النجارة المنزلية والمكتبية في الرياض باحترافية عالية. من تركيب الأبواب والبراويز إلى تفصيل الطاولات والأرفف الديكورية. فريقنا من النجارين المهرة يمتلك الخبرة للتعامل مع مختلف أنواع الأخشاب الصلبة والمصنعة. نضمن لك تشطيباً ناعماً ودهانات عالية الجودة تدوم طويلاً. سواء كان مشروعك صغيراً في شقة أو كبيراً في فيلا، نحن نلتزم بتقديم أدق النتائج وأجمل التصاميم الخشبية التي تضفي دفئاً وقيمة جمالية على مسكنك في أي مكان داخل الرياض.</p>
+                        <button onclick="orderService('أعمال نجارة متكاملة')" class="w-full py-2.5 mt-2 bg-brand-500 hover:bg-brand-600 text-white rounded-lg text-xs font-bold transition-all">اطلب هذه الخدمة الآن</button>
                     </div>
                 </div>
 
                 <!-- Service 6 -->
-                <div class="service-card group bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-100 dark:border-slate-800">
-                    <div class="h-56 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1581781870027-04212e231e96?auto=format&fit=crop&w=600&q=80" alt="تصليح أثاث" class="w-full h-full object-cover">
+                <div class="service-card group bg-white dark:bg-neutral-900 rounded-2xl overflow-hidden shadow-sm flex flex-col">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://i.ibb.co/CKMskxnF/wooden-furniture-repairing-service-500x500.jpg" alt="تصليح أثاث" class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6 space-y-4">
-                        <h3 class="text-xl font-bold" data-i18n="service6_title">تصليح أثاث منزلي وموبيليا</h3>
-                        <p class="text-sm text-slate-500 leading-relaxed h-32 overflow-hidden" data-i18n="service6_desc">خدمة صيانة وتجديد الأثاث في الرياض لإعادة الروح لقطعك المفضلة. نقوم بإصلاح الكسور، تبديل المفصلات التالفة، ومعالجة خدوش الخشب باحترافية. نوفر خدمات فك وتركيب الأثاث أثناء الانتقال لضمان سلامته من التلف. فريق الصيانة لدينا مجهز بأحدث الأدوات للقيام بالإصلاحات في منزلك مباشرة في أغلب الحالات. نحن نوفر عليك تكلفة شراء أثاث جديد عبر تقديم حلول إصلاح ذكية وتجديد للدهانات تجعل موبيليا منزلك في الرياض تبدو وكأنها خرجت من المعرض للتو.</p>
-                        <button onclick="orderService('تصليح أثاث منزلي')" class="w-full py-3 bg-brand-500 hover:bg-brand-600 text-white rounded-xl font-bold transition-all" data-i18n="order_service">اطلب هذه الخدمة الآن</button>
+                    <div class="p-5 flex-grow space-y-3">
+                        <h3 class="text-lg font-black text-brand-700 dark:text-brand-400 text-center">تصليح أثاث منزلي وموبيليا</h3>
+                        <p class="text-[13px] text-slate-500 leading-relaxed text-justify">خدمة صيانة وتجديد الأثاث في الرياض لإعادة الروح لقطعك المفضلة. نقوم بإصلاح الكسور، تبديل المفصلات التالفة، ومعالجة خدوش الخشب باحترافية. نوفر خدمات فك وتركيب الأثاث أثناء الانتقال لضمان سلامته من التلف. فريق الصيانة لدينا مجهز بأحدث الأدوات للقيام بالإصلاحات في منزلك مباشرة في أغلب الحالات. نحن نوفر عليك تكلفة شراء أثاث جديد عبر تقديم حلول إصلاح ذكية وتجديد للدهانات تجعل موبيليا منزلك في الرياض تبدو وكأنها خرجت من المعرض للتو.</p>
+                        <button onclick="orderService('تصليح أثاث منزلي')" class="w-full py-2.5 mt-2 bg-brand-500 hover:bg-brand-600 text-white rounded-lg text-xs font-bold transition-all">اطلب هذه الخدمة الآن</button>
                     </div>
                 </div>
 
@@ -187,103 +197,74 @@
     </section>
 
     <!-- Gallery Section (Slider) -->
-    <section class="py-20 bg-white dark:bg-neutral-900 overflow-hidden">
+    <section class="py-16 bg-white dark:bg-neutral-900 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 relative">
-            <h2 class="text-2xl font-black text-center mb-10" data-i18n="gallery_title">معرض أعمالنا المنجزة</h2>
+            <h2 class="text-xl font-black text-center mb-8">معرض أعمالنا المنجزة</h2>
             
             <div id="gallery-container" class="flex gap-4 overflow-x-auto hide-scrollbar scroll-smooth snap-x">
-                <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=500" class="snap-center w-72 h-96 object-cover rounded-2xl flex-shrink-0">
-                <img src="https://images.unsplash.com/photo-1616486341353-c5833cd717b2?w=500" class="snap-center w-72 h-96 object-cover rounded-2xl flex-shrink-0">
-                <img src="https://images.unsplash.com/photo-1544457070-4cd773b4d71e?w=500" class="snap-center w-72 h-96 object-cover rounded-2xl flex-shrink-0">
-                <img src="https://images.unsplash.com/photo-1597072689227-8882273e8f6a?w=500" class="snap-center w-72 h-96 object-cover rounded-2xl flex-shrink-0">
-            </div>
-
-            <!-- Slider Arrows -->
-            <button onclick="scrollGallery(-300)" class="absolute left-6 top-1/2 bg-black/30 text-white p-2 rounded-full backdrop-blur-md opacity-50 hover:opacity-100">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
-            </button>
-            <button onclick="scrollGallery(300)" class="absolute right-6 top-1/2 bg-black/30 text-white p-2 rounded-full backdrop-blur-md opacity-50 hover:opacity-100">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-            </button>
-        </div>
-    </section>
-
-    <!-- Why Choose Us Section -->
-    <section class="py-20 bg-brand-50 dark:bg-neutral-950">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-black text-center mb-16" data-i18n="why_us_title">لماذا تختار هاني لتفصيل الدواليب؟</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Advantage 1 -->
-                <div class="p-8 bg-white dark:bg-neutral-900 rounded-3xl text-center space-y-4 hover:-translate-y-2 border border-slate-100 dark:border-slate-800">
-                    <div class="w-16 h-16 bg-brand-100 dark:bg-brand-900/30 text-brand-600 rounded-2xl flex items-center justify-center mx-auto">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="2"/></svg>
-                    </div>
-                    <h3 class="font-bold text-lg" data-i18n="adv1_title">جودة الخامات</h3>
-                    <p class="text-xs text-slate-500" data-i18n="adv1_desc">نستخدم أفضل أنواع الخشب المقاوم للرطوبة والحرارة لضمان عمر طويل للأثاث.</p>
-                </div>
-                <!-- Advantage 2 -->
-                <div class="p-8 bg-white dark:bg-neutral-900 rounded-3xl text-center space-y-4 hover:-translate-y-2 border border-slate-100 dark:border-slate-800">
-                    <div class="w-16 h-16 bg-brand-100 dark:bg-brand-900/30 text-brand-600 rounded-2xl flex items-center justify-center mx-auto">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="2"/></svg>
-                    </div>
-                    <h3 class="font-bold text-lg" data-i18n="adv2_title">دقة المواعيد</h3>
-                    <p class="text-xs text-slate-500" data-i18n="adv2_desc">نلتزم بتسليم كافة المشاريع في وقتها المحدد دون تأخير مع الحفاظ على الجودة.</p>
-                </div>
-                <!-- Advantage 3 -->
-                <div class="p-8 bg-white dark:bg-neutral-900 rounded-3xl text-center space-y-4 hover:-translate-y-2 border border-slate-100 dark:border-slate-800">
-                    <div class="w-16 h-16 bg-brand-100 dark:bg-brand-900/30 text-brand-600 rounded-2xl flex items-center justify-center mx-auto">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" stroke-width="2"/></svg>
-                    </div>
-                    <h3 class="font-bold text-lg" data-i18n="adv3_title">تصميم مخصص</h3>
-                    <p class="text-xs text-slate-500" data-i18n="adv3_desc">كل قطعة نصنعها مصممة خصيصاً لتناسب ذوقك واحتياجات مساحتك الفريدة.</p>
-                </div>
-                <!-- Advantage 4 -->
-                <div class="p-8 bg-white dark:bg-neutral-900 rounded-3xl text-center space-y-4 hover:-translate-y-2 border border-slate-100 dark:border-slate-800">
-                    <div class="w-16 h-16 bg-brand-100 dark:bg-brand-900/30 text-brand-600 rounded-2xl flex items-center justify-center mx-auto">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" stroke-width="2"/></svg>
-                    </div>
-                    <h3 class="font-bold text-lg" data-i18n="adv4_title">أسعار تنافسية</h3>
-                    <p class="text-xs text-slate-500" data-i18n="adv4_desc">نوازن بين الفخامة والسعر، لنقدم لك أفضل قيمة مقابل استثمارك في منزلك.</p>
-                </div>
+                <img src="https://i.ibb.co/ym38qgfm/09ee0802-d8be-423d-90c6-ad819be1574c-thumbnail-770x770.png" class="snap-center w-64 h-80 object-cover rounded-2xl flex-shrink-0 border border-brand-200">
+                <img src="https://i.ibb.co/3yxc7KNf/50.jpg" class="snap-center w-64 h-80 object-cover rounded-2xl flex-shrink-0 border border-brand-200">
+                <img src="https://i.ibb.co/k2xqksqm/efe9cc57-88c8-4b97-ab5f-324bc027b307-1000x998-33333333333-y-UF3s56-Gt6di-NOd3hj4g2o-V9-WHr0nnyk1-Hmlccu.jpg" class="snap-center w-64 h-80 object-cover rounded-2xl flex-shrink-0 border border-brand-200">
+                <img src="https://i.ibb.co/Qjt9jZn8/1.webp" class="snap-center w-64 h-80 object-cover rounded-2xl flex-shrink-0 border border-brand-200">
             </div>
         </div>
     </section>
 
     <!-- About Us Section -->
-    <section id="about" class="py-20 bg-white dark:bg-neutral-900">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div class="space-y-6">
-                <h2 class="text-3xl font-black" data-i18n="about_title">من نحن؟ قصة شغف بالخشب</h2>
-                <p class="text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="about_desc">هاني لتفصيل الدواليب ليست مجرد ورشة نجارة، بل هي كيان إبداعي تأسس في قلب الرياض ليغير مفهوم الأثاث المخصص. بدأنا بشغف تحويل قطع الخشب الصماء إلى تحف فنية تنبض بالحياة، واليوم نفخر بخدمة آلاف العملاء في جميع أنحاء المملكة. نجمع بين مهارة اليد السعودية التقليدية وأحدث تقنيات التصميم الأوروبية لنصنع لك أثاثاً يجمع بين القوة، الوظيفة، والجمال المطلق.</p>
-                <ul class="space-y-3">
-                    <li class="flex items-center gap-2 text-sm font-bold text-brand-600"><span class="w-2 h-2 bg-brand-500 rounded-full"></span> خبرة تمتد لأكثر من 15 عاماً</li>
-                    <li class="flex items-center gap-2 text-sm font-bold text-brand-600"><span class="w-2 h-2 bg-brand-500 rounded-full"></span> فريق فني متخصص ومدرب</li>
-                    <li class="flex items-center gap-2 text-sm font-bold text-brand-600"><span class="w-2 h-2 bg-brand-500 rounded-full"></span> ضمان حقيقي على كافة الأعمال</li>
-                </ul>
+    <section id="about" class="py-16 bg-slate-50 dark:bg-neutral-950">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div class="space-y-5">
+                <h2 class="text-2xl font-black">من نحن؟ <span class="text-brand-600">قصة شغف بالنجارة</span></h2>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed text-justify">هاني لتفصيل الدواليب هي رحلة بدأت منذ سنوات في مدينة الرياض، حيث عشقنا تحويل الأخشاب إلى مساحات منظمة وجميلة. نحن لا نقوم بالنجارة فقط، بل نبدع في تفصيل حلول تناسب شخصيتك ومساحة منزلك. نعتمد على أدق التفاصيل لضمان جودة تدوم طويلاً، مستخدمين أفضل أنواع الأخشاب الطبيعية والصناعية لتقديم منتج فني يليق بعملائنا.</p>
+                <div class="flex gap-4 pt-2">
+                    <div class="text-center">
+                        <span class="block text-xl font-black text-brand-600">15+</span>
+                        <span class="text-[10px] font-bold text-slate-500 uppercase">سنة خبرة</span>
+                    </div>
+                    <div class="text-center">
+                        <span class="block text-xl font-black text-brand-600">2000+</span>
+                        <span class="text-[10px] font-bold text-slate-500 uppercase">عميل سعيد</span>
+                    </div>
+                </div>
             </div>
-            <div class="rounded-3xl overflow-hidden shadow-2xl rotate-2">
-                <img src="https://images.unsplash.com/photo-1581539250439-c96689b516dd?auto=format&fit=crop&w=800&q=80" alt="Carpentry Workshop" class="w-full h-full object-cover">
+            <div class="rounded-3xl overflow-hidden shadow-2xl">
+                <img src="https://i.ibb.co/rR4yTdKW/20191001-095341-copy.webp" alt="ورشة نجارة هاني" class="w-full h-full object-cover">
             </div>
         </div>
     </section>
 
-    <!-- Map & Form (Condensed) -->
-    <section id="contact" class="py-20 bg-slate-50 dark:bg-neutral-950">
+    <!-- Contact & Form -->
+    <section id="contact" class="py-16 bg-white dark:bg-neutral-900">
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10">
-            <!-- Map -->
-            <div class="rounded-3xl overflow-hidden border-4 border-white dark:border-neutral-800 shadow-xl h-[400px]">
+            <div class="rounded-[2rem] overflow-hidden border border-slate-200 dark:border-neutral-800 shadow-xl h-[350px]">
                 <iframe class="w-full h-full grayscale dark:invert" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115981.16109923236!2d46.73858079999999!3d24.8156101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0xba974d1c98e91f55!2sRiyadh%20Saudi%20Arabia!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
             </div>
-            <!-- Simple Form -->
-            <div class="bg-white dark:bg-neutral-900 p-8 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-800">
-                <h2 class="text-2xl font-black mb-6" data-i18n="form_title">تواصل معنا الآن</h2>
-                <form onsubmit="handleFormSubmit(event)" class="space-y-4">
-                    <input type="text" id="user-name" required placeholder="الاسم الكريم" class="w-full p-4 bg-slate-50 dark:bg-neutral-950 rounded-xl outline-none focus:ring-2 focus:ring-brand-500">
-                    <input type="tel" id="user-phone" required placeholder="رقم الجوال" class="w-full p-4 bg-slate-50 dark:bg-neutral-950 rounded-xl outline-none focus:ring-2 focus:ring-brand-500 text-left">
-                    <textarea id="user-details" placeholder="ما هي الخدمة التي تفكر بها؟" class="w-full p-4 bg-slate-50 dark:bg-neutral-950 rounded-xl outline-none focus:ring-2 focus:ring-brand-500 h-32"></textarea>
-                    <button type="submit" class="w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-xl flex items-center justify-center gap-2 shadow-lg">
+            
+            <div class="bg-brand-50 dark:bg-neutral-800/50 p-7 rounded-[2rem] border border-brand-100 dark:border-brand-900">
+                <h2 class="text-xl font-black mb-5 text-center">تواصل معنا لحجز موعد</h2>
+                <form onsubmit="handleFormSubmit(event)" class="space-y-3">
+                    <div>
+                        <label class="block text-[11px] font-bold mb-1 mr-2 text-brand-700">الاسم الكريم</label>
+                        <input type="text" id="user-name" required placeholder="أدخل اسمك بالكامل" class="w-full p-3 bg-white dark:bg-neutral-950 rounded-xl outline-none focus:ring-2 focus:ring-brand-500 border border-brand-100">
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-bold mb-1 mr-2 text-brand-700">الخدمة المطلوبة</label>
+                        <select id="user-service" required class="w-full p-3 bg-white dark:bg-neutral-950 rounded-xl outline-none focus:ring-2 focus:ring-brand-500 border border-brand-100 cursor-pointer appearance-none">
+                            <option value="تفصيل خزائن">تفصيل خزائن في الرياض</option>
+                            <option value="غرف نوم">تفصيل غرف نوم في الرياض</option>
+                            <option value="غرف أطفال">تفصيل غرف أطفال في الرياض</option>
+                            <option value="دواليب ملابس">تفصيل دواليب ملابس بالرياض</option>
+                            <option value="نجارة متكاملة">أعمال نجارة متكاملة</option>
+                            <option value="تصليح أثاث">تصليح أثاث منزلي وموبيليا</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-bold mb-1 mr-2 text-brand-700">التفاصيل</label>
+                        <textarea id="user-details" placeholder="اكتب المقاسات أو أي تفاصيل إضافية هنا..." class="w-full p-3 bg-white dark:bg-neutral-950 rounded-xl outline-none focus:ring-2 focus:ring-brand-500 border border-brand-100 h-24"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-xl flex items-center justify-center gap-2 shadow-lg transition-transform active:scale-95">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.528 1.975 14.076 1.01 11.532 1.01c-5.44 0-9.866 4.372-9.87 9.802 0 1.714.484 3.393 1.401 4.887l-.955 3.486 3.59-.933z" /></svg>
-                        ارسال عبر واتساب
+                        ارسل طلبي عبر واتساب
                     </button>
                 </form>
             </div>
@@ -291,60 +272,32 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-10 bg-white dark:bg-neutral-900 border-t border-slate-200 dark:border-slate-800 text-center mb-20 lg:mb-0">
-        <p class="text-sm text-slate-500" data-i18n="footer_copyright">جميع الحقوق محفوظة هاني لتفصيل الدواليب 2026 ©</p>
+    <footer class="py-8 bg-white dark:bg-neutral-900 border-t border-slate-100 dark:border-slate-800 text-center mb-20 lg:mb-0">
+        <p class="text-[11px] font-bold text-slate-400">جميع الحقوق محفوظة هاني لخدمات تفصيل غرف الملابس 2026 ©</p>
     </footer>
 
-    <!-- Bottom Navigation Bar (Mobile) -->
-    <div class="fixed bottom-6 left-6 right-6 z-50 lg:hidden flex justify-between items-center bg-white/90 dark:bg-neutral-900/90 backdrop-blur-xl py-3 px-6 rounded-3xl shadow-2xl border border-white/20">
-        <a href="tel:0560450799" class="flex flex-col items-center gap-1 text-slate-500 hover:text-brand-600">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-            <span class="text-[10px] font-black" data-i18n="bar_call">اتصل بنا</span>
+    <!-- Bottom Nav (Mobile) -->
+    <div class="fixed bottom-4 left-4 right-4 z-50 lg:hidden flex justify-around items-center bg-white/90 dark:bg-neutral-900/90 backdrop-blur-xl py-3 px-4 rounded-2xl shadow-2xl border border-slate-200/50">
+        <a href="tel:0560450799" class="flex flex-col items-center gap-1 text-slate-500">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+            <span class="text-[9px] font-black">اتصال</span>
         </a>
         <a href="https://wa.me/966560450799" class="flex flex-col items-center gap-1 text-emerald-600">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.004 0C5.378 0 .004 5.374.004 12.001c0 2.112.551 4.16 1.596 5.97L.004 24l6.19-1.623c1.765.961 3.753 1.468 5.805 1.468 6.628 0 12.002-5.375 12.002-12.001C24.001 5.374 18.63 0 12.004 0zm0 22.002c-1.849 0-3.663-.497-5.253-1.437l-.377-.223-3.673.963.98-3.581-.244-.388c-.997-1.587-1.523-3.425-1.521-5.31C1.92 6.47 6.443 1.945 12.004 1.945c2.695.001 5.228 1.05 7.132 2.956 1.904 1.905 2.951 4.439 2.949 7.138-.004 5.526-4.526 10.048-10.081 10.048z" /></svg>
-            <span class="text-[10px] font-black" data-i18n="bar_whatsapp">واتساب</span>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.004 0C5.378 0 .004 5.374.004 12.001c0 2.112.551 4.16 1.596 5.97L.004 24l6.19-1.623c1.765.961 3.753 1.468 5.805 1.468 6.628 0 12.002-5.375 12.002-12.001C24.001 5.374 18.63 0 12.004 0zm0 22.002c-1.849 0-3.663-.497-5.253-1.437l-.377-.223-3.673.963.98-3.581-.244-.388c-.997-1.587-1.523-3.425-1.521-5.31C1.92 6.47 6.443 1.945 12.004 1.945c2.695.001 5.228 1.05 7.132 2.956 1.904 1.905 2.951 4.439 2.949 7.138-.004 5.526-4.526 10.048-10.081 10.048z" /></svg>
+            <span class="text-[9px] font-black">واتساب</span>
         </a>
         <a href="#services" class="flex flex-col items-center gap-1 text-slate-500">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
-            <span class="text-[10px] font-black" data-i18n="bar_services">خدماتنا</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+            <span class="text-[9px] font-black">الخدمات</span>
         </a>
         <a href="#about" class="flex flex-col items-center gap-1 text-slate-500">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
-            <span class="text-[10px] font-black" data-i18n="bar_about">من نحن</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+            <span class="text-[9px] font-black">من نحن</span>
         </a>
     </div>
 
-    <!-- Scripts -->
     <script>
-        const translations = {
-            ar: {
-                header_brand: "هاني لتفصيل الدواليب", nav_home: "الرئيسية", nav_services: "خدماتنا", nav_about: "من نحن", nav_contact: "طلب تسعيرة",
-                hero_tagline: "فخامة النجارة السعودية بأيدي محترفة", hero_title: "نصمم لك خزانة أحلامك بدقة متناهية", hero_desc: "خبراء في تفصيل الخزائن المودرن وغرف النوم المخصصة في الرياض، نجمع بين استغلال المساحات الذكي وأرقى التصاميم العالمية لنمنح منزلك لمسة من الرقي والجمال.",
-                hero_cta: "ابدأ تصميم غرفتك الآن", hero_call: "اتصل بنا مباشرة", services_section_title: "خدماتنا المتخصصة في الرياض",
-                order_service: "اطلب هذه الخدمة الآن", why_us_title: "لماذا تختار هاني لتفصيل الدواليب؟",
-                adv1_title: "جودة الخامات", adv1_desc: "نستخدم أفضل أنواع الخشب المقاوم للرطوبة والحرارة لضمان عمر طويل.",
-                adv2_title: "دقة المواعيد", adv2_desc: "نلتزم بتسليم كافة المشاريع في وقتها المحدد دون تأخير.",
-                adv3_title: "تصميم مخصص", adv3_desc: "كل قطعة نصنعها مصممة خصيصاً لتناسب ذوقك واحتياجاتك.",
-                adv4_title: "أسعار تنافسية", adv4_desc: "نوازن بين الفخامة والسعر لتقديم أفضل قيمة.",
-                about_title: "من نحن؟ قصة شغف بالخشب", gallery_title: "معرض أعمالنا المنجزة",
-                form_title: "تواصل معنا الآن", bar_call: "اتصال", bar_whatsapp: "واتساب", bar_services: "خدماتنا", bar_about: "من نحن"
-            },
-            en: {
-                header_brand: "Hani Closets", nav_home: "Home", nav_services: "Services", nav_about: "About", nav_contact: "Get Quote",
-                hero_tagline: "Premium Saudi Craftsmanship", hero_title: "We Design Your Dream Closet with Precision", hero_desc: "Experts in custom modern closets and bedrooms in Riyadh. We blend smart spatial planning with luxury designs.",
-                hero_cta: "Start Your Design", hero_call: "Call Us", services_section_title: "Our Specialized Services in Riyadh",
-                order_service: "Order Service", why_us_title: "Why Choose Hani Closets?",
-                adv1_title: "Quality Materials", adv1_desc: "We use moisture and heat resistant woods for maximum durability.",
-                adv2_title: "On-Time Delivery", adv2_desc: "We strictly adhere to project timelines with no delays.",
-                adv3_title: "Custom Design", adv3_desc: "Every piece is uniquely crafted to match your specific taste.",
-                adv4_title: "Fair Pricing", adv4_desc: "Luxury designs balanced with competitive pricing.",
-                about_title: "Who We Are", gallery_title: "Our Work Gallery",
-                form_title: "Contact Us Now", bar_call: "Call", bar_whatsapp: "WhatsApp", bar_services: "Services", bar_about: "About"
-            }
-        };
-
-        // Theme Toggle Logic
+        // Theme Toggle
         const themeToggle = document.getElementById('theme-toggle');
         themeToggle.addEventListener('click', () => {
             document.documentElement.classList.toggle('dark');
@@ -352,51 +305,31 @@
             document.getElementById('theme-sun').classList.toggle('hidden');
         });
 
-        // Language Logic
-        let currentLang = 'ar';
-        const langToggle = document.getElementById('lang-toggle');
-        langToggle.addEventListener('click', () => {
-            currentLang = currentLang === 'ar' ? 'en' : 'ar';
-            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
-            langToggle.innerText = currentLang === 'ar' ? 'EN' : 'AR';
-            updateTexts();
-        });
-
-        function updateTexts() {
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (translations[currentLang][key]) el.innerText = translations[currentLang][key];
-            });
+        // WhatsApp Ordering
+        function orderService(service) {
+            const msg = encodeURIComponent(`مرحباً هاني، أرغب في الاستفسار عن خدمة: ${service}`);
+            window.open(`https://wa.me/966560450799?text=${msg}`, '_blank');
         }
 
-        // Gallery Scroll
-        function scrollGallery(amount) {
-            document.getElementById('gallery-container').scrollBy({ left: amount, behavior: 'smooth' });
+        // Form Submission
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('user-name').value;
+            const service = document.getElementById('user-service').value;
+            const details = document.getElementById('user-details').value;
+            const msg = encodeURIComponent(`طلب موعد جديد:\nالاسم: ${name}\nالخدمة: ${service}\nالتفاصيل: ${details}`);
+            window.open(`https://wa.me/966560450799?text=${msg}`, '_blank');
         }
 
-        // Auto Gallery Slider
+        // Auto Gallery Move
         setInterval(() => {
             const container = document.getElementById('gallery-container');
             if (container.scrollLeft + container.offsetWidth >= container.scrollWidth) {
                 container.scrollTo({ left: 0, behavior: 'smooth' });
             } else {
-                scrollGallery(300);
+                container.scrollBy({ left: 200, behavior: 'smooth' });
             }
-        }, 3000);
-
-        // WhatsApp Order Logic
-        function orderService(serviceName) {
-            const text = encodeURIComponent(`مرحباً هاني، أرغب في الاستفسار عن خدمة: ${serviceName}`);
-            window.open(`https://wa.me/966560450799?text=${text}`, '_blank');
-        }
-
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            const name = document.getElementById('user-name').value;
-            const details = document.getElementById('user-details').value;
-            const text = encodeURIComponent(`الاسم: ${name}\nالتفاصيل: ${details}`);
-            window.open(`https://wa.me/966560450799?text=${text}`, '_blank');
-        }
+        }, 4000);
     </script>
 </body>
 </html>
